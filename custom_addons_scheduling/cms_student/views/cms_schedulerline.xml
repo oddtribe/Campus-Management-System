@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_cms_schedulerline_form_id" model="ir.ui.view">
+        <field name="name">cms.schedulerline.form</field>
+        <field name="model">cms.schedulerline</field>
+        <field name="arch" type="xml">
+            <form string="schedule-line Information">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Schedule-line"/>
+                        </h1>
+                    </div>
+
+                    <div>
+                        <group colspan="4" col="4" string="Schedule-line Information">
+                            <field name="schedule_id"/>
+                            <field name="date"/>
+                            <field name="course_id"/>
+                            <field name="room_id"/>
+                            <field name="teacher_id"/>
+                            <field name="invigilator_id"/>
+                            <field name="timeslot"/>
+<!--                            <field name="cms"/>-->
+                        </group>
+
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View of schedule -->
+    <record id="view_cms_schedulerline_tree_id" model="ir.ui.view">
+        <field name="name">student.schedulerline.tree</field>
+        <field name="model">cms.schedulerline</field>
+        <field name="arch" type="xml">
+            <tree string="scheduleline Information" create="true" delete="false">
+                <field name="name"/>
+                <field name="schedule_id"/>
+                <field name="date"/>
+                <field name="course_id"/>
+                <field name="room_id"/>
+                <field name="teacher_id"/>
+                <field name="invigilator_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Click Action for schedule menu-->
+
+    <record id="action_cms_schedulerline_id" model="ir.actions.act_window">
+        <field name="name">Scheduleline</field>
+        <field name="res_model">cms.schedulerline</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

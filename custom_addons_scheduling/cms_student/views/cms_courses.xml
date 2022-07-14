@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_cms_courses_form_id" model="ir.ui.view">
+        <field name="name">cms.courses.form</field>
+        <field name="model">cms.courses</field>
+        <field name="arch" type="xml">
+            <form string="Courses Information">
+                <sheet>
+
+                    <div>
+                        <group colspan="4" col="4" string="Courses' Information">
+
+                            <field name="name"/>
+                            <field name="code" />
+                            <field name="schedule_line"/>
+
+                        </group>
+
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View of Courses -->
+    <record id="view_cms_courses_tree_id" model="ir.ui.view">
+        <field name="name">student.courses.tree</field>
+        <field name="model">cms.courses</field>
+        <field name="arch" type="xml">
+            <tree string="Courses Information" create="true" delete="false">
+                <field name="name"/>
+                <field name="code" />
+                <field name="schedule_line"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <!--    Click Action for Courses menu-->
+
+    <record id="action_cms_courses_id" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">cms.courses</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_cms_block_form_id" model="ir.ui.view">
+        <field name="name">cms.block.form</field>
+        <field name="model">cms.block</field>
+        <field name="arch" type="xml">
+            <form string="Block Information">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Block Name"/>
+                        </h1>
+                    </div>
+
+                    <div>
+                        <group colspan="4" col="4" string="Block' Information">
+<!--                            <field name="name"/>-->
+                            <field name="room_id"/>
+                        </group>
+
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View of Block -->
+    <record id="view_cms_block_tree_id" model="ir.ui.view">
+        <field name="name">student.block.tree</field>
+        <field name="model">cms.block</field>
+        <field name="arch" type="xml">
+            <tree string="Block Information" create="true" delete="false">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Click Action for Block menu-->
+
+    <record id="action_cms_block_id" model="ir.actions.act_window">
+        <field name="name">Block</field>
+        <field name="res_model">cms.block</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

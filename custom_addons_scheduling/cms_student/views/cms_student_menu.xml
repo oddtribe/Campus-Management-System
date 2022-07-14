@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Top Menu CMS -->
+    <menuitem id="menu_main_campus_id" name="Scheduling" web_icon="cms_student,static/description/icon.png" sequence="1"
+    		groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+    
+    <!-- Menu Student/ Department -->
+    <menuitem id="menu_cms_student_main_id" name="Scheduling Details" parent="menu_main_campus_id" sequence="1"
+        	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_department_1" name="Department" parent="menu_cms_student_main_id" action="action_cms_department_id" sequence="20"
+		groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_student_1" name="Student" parent="menu_cms_student_main_id" action="action_cms_student_id" sequence="20"
+	    	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_courses_1" name="Courses" parent="menu_cms_student_main_id" action="action_cms_courses_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_block_1" name="Block" parent="menu_cms_student_main_id" action="action_cms_block_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_room_1" name="Room" parent="menu_cms_student_main_id" action="action_cms_room_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_timeslot_1" name="TimeSlot" parent="menu_cms_student_main_id" action="action_cms_timeslot_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_schedule_1" name="Schedule" parent="menu_cms_student_main_id" action="action_cms_schedule_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+	<menuitem id="menu_cms_schedulerline_1" name="Schedule-Line" parent="menu_cms_student_main_id" action="action_cms_schedulerline_id" sequence="20"
+	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+<!--	<menuitem id="menu_cms_prerequisite_1" name="Prerequisites" parent="menu_cms_student_main_id" action="action_cms_prerequisite_id" sequence="20"-->
+<!--			groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>-->
+
+<!--	<menuitem id="menu_cms_passedcourses_1" name="Passed Courses" parent="menu_cms_student_main_id" action="action_cms_passed_id" sequence="20"-->
+<!--			groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>-->
+
+<!--	<menuitem id="menu_cms_offeredcourses_1" name="Offered Courses" parent="menu_cms_student_main_id" action="action_cms_offered_id" sequence="20"-->
+<!--        	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>-->
+
+
+<!--	<menuitem id="menu_cms_group_1" name="Section_groups" parent="menu_cms_student_main_id" action="action_cms_group_id" sequence="20"-->
+<!--			groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>-->
+
+<!--	<menuitem id="menu_cms_section_1" name="Sections" parent="menu_cms_student_main_id" action="action_cms_section_id" sequence="20"-->
+<!--			groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>-->
+
+
+
+    <!-- Menu Reports -->
+    <menuitem id="menu_cms_student_report_id" name="CMS Reports" parent="menu_main_campus_id" sequence="2" 
+        	groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+    <menuitem id="menu_cms_student_report_3_id" name="Print Report (3)" parent="menu_cms_student_report_id" action="action_wizard_report_3_id" sequence="21"
+			groups="cms_student.group_cms_student_officer_id,cms_student.group_cms_student_manager_id,cms_student.group_cms_student_administrator_id"/>
+
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="view_cms_timeslot_form_id" model="ir.ui.view">
+        <field name="name">cms.timeslot.form</field>
+        <field name="model">cms.timeslot</field>
+        <field name="arch" type="xml">
+            <form string="Time Slots Information">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Time Slot"/>
+                        </h1>
+                    </div>
+
+                    <div>
+                        <group colspan="4" col="4" string="Timeslot Information">
+<!--                            <field name="id"/>-->
+
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="duration"/>
+                            <field name="cms_scheduled"/>
+                            <field name="schedulerline"/>
+
+                        </group>
+
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View of TimeSlot -->
+    <record id="view_cms_timeslot_tree_id" model="ir.ui.view">
+        <field name="name">student.timeslot.tree</field>
+        <field name="model">cms.timeslot</field>
+        <field name="arch" type="xml">
+            <tree string="Time Slot Information" create="true" delete="false">
+                <field name="name"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="duration"/>
+                <field name="cms_scheduled"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Click Action for Time Slots menu-->
+
+    <record id="action_cms_timeslot_id" model="ir.actions.act_window">
+        <field name="name">TimeSlot</field>
+        <field name="res_model">cms.timeslot</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

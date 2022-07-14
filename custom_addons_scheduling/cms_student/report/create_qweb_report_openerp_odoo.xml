@@ -1,0 +1,48 @@
+<div>
+    <table class="table report_border table-hover table-striped">
+        <thead>
+            <tr>
+                <th style="padding: 0px;" class="text-center"><h5><b>Scheduling</b></h5></th>
+<!--                <th style="padding: 0px;" class="text-center"><h5><b>Heading 2</b></h5></th>-->
+<!--                <th style="padding: 0px;" class="text-center"><h5><b>Heading 3</b</h5></th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="data" t-as="d">
+                <tr>
+
+
+
+
+
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.name"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.scheduler_id"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.date"/>
+                    </td>
+
+
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.course_id"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.room_id"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.teacher_id"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.invigilator_id"/>
+                    </td>
+                    <td class="text-center" style="vertical-align:middle;">
+                        <span t-esc="d.timeslot"/>
+                    </td>
+                </tr>
+            </t>
+        </tbody>
+    </table>
+</div>
